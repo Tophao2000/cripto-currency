@@ -1,0 +1,14 @@
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid #ffffff;
+}
+
+.footer span, .footer a {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
