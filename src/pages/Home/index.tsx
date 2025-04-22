@@ -25,21 +25,21 @@ import style from "./style.module.css";
 function Home() {
   const [input, setInput] = useState("");
   const [coins, setCoins] = useState<CoinProps[]>([]);
-  const [loadMore, setLoadMore] = useState({limit: 10, offset: 0});
+  const [offset, setOffset] = useState(0);
 
   const navigate = useNavigate();
 
   useEffect(() => {
     getData();
-  }, [loadMore]);
+  }, [offset]);
 
   // Função para buscar as moedas na API e deixar seus valores formatados
   async function getData() {
     await api
       .get<DataProps>("/assets", {
         params: {
-          limit: loadMore.limit,
-          offset: loadMore.offset,
+          limit: 10,
+          offset: offset,
           apiKey:
             "854e2728d0f17861557234ab1790d399d4478f2f8d778ca990fe922ac1789c9b",
         },
@@ -62,7 +62,10 @@ function Home() {
           return formated;
         });
 
-        setCoins([...coins, ...formatedResult]);
+        const coinsLists = [...coins, ...formatedResult];
+
+        setCoins(coinsLists);
+
       })
       .catch(() => navigate("/"));
   }
@@ -74,7 +77,7 @@ function Home() {
   }
 
   function getMore() {
-    setLoadMore({limit: loadMore.limit + 10, offset: loadMore.offset + 10});
+    setOffset(offset + 10);
   }
 
   if (coins.length === 0) {
