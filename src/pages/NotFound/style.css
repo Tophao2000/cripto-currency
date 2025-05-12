@@ -1,0 +1,45 @@
+.error {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.error h1 {
+  font-size: 5rem;
+  text-align: center;
+  color: #dd0000;
+}
+
+.error h2 {
+  color: #ffffff;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.error span {
+  color: #ffffff;
+  font-size: 10rem;
+  text-align: center;
+  transform: rotate(90deg);
+}
+
+.error a {
+  background-color: #116feb;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 14px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.error a:hover {
+  background-color: #0c5dc7;
+  scale: 1.02;
+}

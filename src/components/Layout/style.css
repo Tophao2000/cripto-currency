@@ -1,0 +1,12 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}

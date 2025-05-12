@@ -1,0 +1,15 @@
+.container {
+  padding: 40px 0;
+  text-align: center;
+  background-image: linear-gradient(to top, #3087FF, #30C4FF );
+  width: 100%;
+}
+
+.container span, .container a {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}

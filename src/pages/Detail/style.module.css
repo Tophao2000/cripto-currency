@@ -1,0 +1,73 @@
+:root {
+  --bgColorOne: #2c2c2c;
+  --bgColorTwo: #1c1c1c;
+}
+
+@keyframes loadingEffect {
+  0% {
+    background-color: var(--bgColorOne);
+  }
+  50% {
+    background-color: var(--bgColorTwo);
+  }
+  100% {
+    background-color: var(--bgColorOne);
+  }
+}
+
+.container {
+  padding: 0 14px;
+  color: #ffffff;
+}
+/*página carregando*/
+.centerSkeleton {
+  margin: 0 auto 14px auto;
+  width: 150px;
+  height: 40px;
+  animation: loadingEffect 1s infinite;
+  border-radius: 14px;
+}
+
+.contentSkeleton {
+  margin: 24px auto;
+  height: 270px;
+  max-width: 420px;
+  animation: loadingEffect 1s infinite;
+  border-radius: 14px;
+}
+
+/*página carregada*/
+.center {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.content {
+  background-color: var(--bgColorOne);
+  margin: 24px auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 420px;
+  border-radius: 14px;
+  gap: 14px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  transition: all 1s;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+}
+
+.profit {
+  color: #12f98a;
+}
+
+.loss {
+  color: #f91257;
+}

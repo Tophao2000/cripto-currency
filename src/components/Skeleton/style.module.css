@@ -1,0 +1,106 @@
+:root {
+  --bgColorOne: #2c2c2c;
+  --bgColorTwo: #1c1c1c;
+}
+
+@keyframes loadingEffect {
+  0% {
+    background-color: var(--bgColorOne);
+  }
+  50% {
+    background-color: var(--bgColorTwo);
+  }
+  100% {
+    background-color: var(--bgColorOne);
+  }
+}
+
+.skeletonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  gap: 1rem;
+  padding: 0 14px;
+  width: 100%;
+  max-width: 1080px;
+}
+
+.skeletonForm {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  height: 44px;
+}
+
+.skeletonInput {
+  flex-grow: 1;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  animation: loadingEffect 1s infinite;
+}
+
+ .skeletonButton {
+  animation: loadingEffect 1s infinite;
+
+  width: 50px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.skeletonTable {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skeletonThead {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 16px 0;
+}
+
+.skeletonTh {
+  animation: loadingEffect 1s infinite;
+  height: 18px;
+  width: 120px;
+  border-radius: 4px;
+}
+
+.skeletonTbody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skeletonTr {
+  width: 100%;
+  height: 44px;
+  animation: loadingEffect 1s infinite;
+  border-radius: 8px;
+}
+
+.skeletonPagination {
+  width: 150px;
+  height: 50px;
+  margin: 16px 0;
+  animation: loadingEffect 1s infinite;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 900px) {
+  .skeletonThead {
+    display: none;
+  }
+
+  .skeletonTable {
+    margin-top: 32px;
+  }
+
+  .skeletonTr {
+    height: 400px;
+  }
+}
